@@ -1,21 +1,3 @@
-/* Fonts */
-:root {
-  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-primary: "Roboto", sans-serif;
-  --font-secondary: "Work Sans", sans-serif;
-}
-
-/* Colors */
-:root {
-  --color-default: #364d59;
-  --color-primary: #feb900;
-  --color-secondary: #52565e;
-}
-
-/* Smooth scroll behavior */
-:root {
-  scroll-behavior: smooth;
-}
 
 body {
   font-family: var(--font-default);
@@ -40,6 +22,25 @@ h4,
 h5,
 h6 {
   font-family: var(--font-primary);
+}
+
+/* Fonts */
+:root {
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "Work Sans", sans-serif;
+}
+
+/* Colors */
+:root {
+  --color-default: #364d59;
+  --color-primary: #feb900;
+  --color-secondary: #52565e;
+}
+
+/* Smooth scroll behavior */
+:root {
+  scroll-behavior: smooth;
 }
 
 section {
@@ -521,31 +522,31 @@ section {
   font-size: 14px;
 }
 
-.get-started-email-form {
+.get-started .php-email-form {
   background: #fff;
   padding: 30px;
   height: 100%;
 }
 
 @media (max-width: 575px) {
-  .get-started-email-form {
+  .get-started .php-email-form {
     padding: 20px;
   }
 }
 
-.get-started-email-form h3 {
+.get-started .php-email-form h3 {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.get-started-email-form p {
+.get-started .php-email-form p {
   font-size: 14px;
   margin-bottom: 20px;
 }
 
-.get-started-email-form .error-message {
+.get-started .php-email-form .error-message {
   display: none;
   color: #fff;
   background: #df1529;
@@ -555,7 +556,7 @@ section {
   font-weight: 600;
 }
 
-.get-started-email-form .sent-message {
+.get-started .php-email-form .sent-message {
   display: none;
   color: #fff;
   background: #059652;
@@ -565,7 +566,7 @@ section {
   font-weight: 600;
 }
 
-.get-started-email-form .loading {
+.get-started .php-email-form .loading {
   display: none;
   background: #fff;
   text-align: center;
@@ -573,7 +574,7 @@ section {
   margin-bottom: 24px;
 }
 
-.get-started-email-form .loading:before {
+.get-started .php-email-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -585,28 +586,28 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.get-started-email-form input,
-.get-started-email-form textarea {
+.get-started .php-email-form input,
+.get-started .php-email-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
   border-radius: 0;
 }
 
-.get-started-email-form input:focus,
-.get-started-email-form textarea:focus {
+.get-started .php-email-form input:focus,
+.get-started .php-email-form textarea:focus {
   border-color: var(--color-primary);
 }
 
-.get-started-email-form input {
+.get-started .php-email-form input {
   padding: 12px 15px;
 }
 
-.get-started-email-form textarea {
+.get-started .php-email-form textarea {
   padding: 12px 15px;
 }
 
-.get-started-email-form button[type=submit] {
+.get-started .php-email-form button[type=submit] {
   background: var(--color-primary);
   border: 0;
   padding: 10px 30px;
@@ -615,7 +616,7 @@ section {
   border-radius: 4px;
 }
 
-.get-started-email-form button[type=submit]:hover {
+.get-started .php-email-form button[type=submit]:hover {
   background: rgba(254, 185, 0, 0.8);
 }
 
@@ -1582,18 +1583,18 @@ section {
   margin-bottom: 0;
 }
 
-.contact-email-form {
+.contact .php-email-form {
   width: 100%;
   background: #fff;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
   padding: 30px;
 }
 
-.contact-email-form .form-group {
+.contact .php-email-form .form-group {
   padding-bottom: 20px;
 }
 
-.contact-email-form .error-message {
+.contact .php-email-form .error-message {
   display: none;
   color: #fff;
   background: #df1529;
@@ -1602,11 +1603,11 @@ section {
   font-weight: 600;
 }
 
-.contact-email-form .error-message br+br {
+.contact .php-email-form .error-message br+br {
   margin-top: 25px;
 }
 
-.contact-email-form .sent-message {
+.contact .php-email-form .sent-message {
   display: none;
   color: #fff;
   background: #059652;
@@ -1615,14 +1616,14 @@ section {
   font-weight: 600;
 }
 
-.contact-email-form .loading {
+.contact .php-email-form .loading {
   display: none;
   background: #fff;
   text-align: center;
   padding: 15px;
 }
 
-.contact-email-form .loading:before {
+.contact .php-email-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1634,27 +1635,27 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact-email-form input,
-.contact-email-form textarea {
+.contact .php-email-form input,
+.contact .php-email-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
 }
 
-.contact-email-form input:focus,
-.contact-email-form textarea:focus {
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
   border-color: var(--color-primary);
 }
 
-.contact-email-form input {
+.contact .php-email-form input {
   height: 44px;
 }
 
-.contact-email-form textarea {
+.contact .php-email-form textarea {
   padding: 10px 12px;
 }
 
-.contact-email-form button[type=submit] {
+.contact .php-email-form button[type=submit] {
   background: var(--color-primary);
   border: 0;
   padding: 10px 35px;
@@ -1663,9 +1664,128 @@ section {
   border-radius: 5px;
 }
 
-.contact-email-form button[type=submit]:hover {
+.contact .php-email-form button[type=submit]:hover {
   background: rgba(254, 185, 0, 0.8);
 }
+
+.login .info-item {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+  padding: 20px 0 30px 0;
+}
+
+.login .info-item i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+  line-height: 0;
+  color: var(--color-primary);
+  border-radius: 50%;
+  border: 2px dotted #ffd565;
+}
+
+.login .info-item h3 {
+  font-size: 20px;
+  color: #6c757d;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.login .info-item p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.login .php-email-form {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+}
+
+.login .php-email-form .form-group {
+  padding-bottom: 20px;
+}
+
+.login .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #df1529;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.login .php-email-form .error-message br+br {
+  margin-top: 25px;
+}
+
+.login .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #059652;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.login .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.login .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #059652;
+  border-top-color: #fff;
+  animation: animate-loading 1s linear infinite;
+}
+
+.login .php-email-form input,
+.login .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.login .php-email-form input:focus,
+.login .php-email-form textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.login .php-email-form input {
+  height: 44px;
+}
+
+.login .php-email-form textarea {
+  padding: 10px 12px;
+}
+
+.login .php-email-form button[type=submit] {
+  background: var(--color-primary);
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+.login .php-email-form button[type=submit]:hover {
+  background: rgba(254, 185, 0, 0.8);
+}
+
+
 
 @keyframes animate-loading {
   0% {
