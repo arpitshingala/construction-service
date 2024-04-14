@@ -1,3 +1,12 @@
+// let isSucces = true
+//         if (!obj.title) {
+//             isSucces = false
+//             document.getElementById('errorTitle').innerText = "Please enter title"
+//         } else {
+//             isSucces = true
+//             document.getElementById('errorTitle').innerText = ""
+//         }
+
 
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
