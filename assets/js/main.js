@@ -1,69 +1,33 @@
-// let isSucces = true
-//         if (!obj.title) {
-//             isSucces = false
-//             document.getElementById('errorTitle').innerText = "Please enter title"
-//         } else {
-//             isSucces = true
-//             document.getElementById('errorTitle').innerText = ""
-//         }
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  "use strict";
-
-  /**
-   * Preloader
-   */
-  const preloader = document.querySelector('#preloader');
+const preloader = document.querySelector('#preloader');
   if (preloader) {
     window.addEventListener('load', () => {
       preloader.remove();
     });
   }
-
-  /**
-   * Mobile nav toggle
-   */
-
   const mobileNavShow = document.querySelector('.mobile-nav-show');
   const mobileNavHide = document.querySelector('.mobile-nav-hide');
-
   document.querySelectorAll('.mobile-nav-toggle').forEach(el => {
     el.addEventListener('click', function(event) {
       event.preventDefault();
       mobileNavToogle();
     })
   });
-
   function mobileNavToogle() {
     document.querySelector('body').classList.toggle('mobile-nav-active');
     mobileNavShow.classList.toggle('d-none');
     mobileNavHide.classList.toggle('d-none');
   }
-
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
   document.querySelectorAll('#navbar a').forEach(navbarlink => {
-
     if (!navbarlink.hash) return;
-
     let section = document.querySelector(navbarlink.hash);
     if (!section) return;
-
     navbarlink.addEventListener('click', () => {
       if (document.querySelector('.mobile-nav-active')) {
         mobileNavToogle();
       }
     });
-
   });
-
-  /**
-   * Toggle mobile nav dropdowns
-   */
   const navDropdowns = document.querySelectorAll('.navbar .dropdown > a');
-
   navDropdowns.forEach(el => {
     el.addEventListener('click', function(event) {
       if (document.querySelector('.mobile-nav-active')) {
@@ -77,10 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   });
-
-  /**
-   * Scroll top button
-   */
   const scrollTop = document.querySelector('.scroll-top');
   if (scrollTop) {
     const togglescrollTop = function() {
@@ -93,25 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
       behavior: 'smooth'
     }));
   }
-
-  /**
-   * Initiate glightbox
-   */
   const glightbox = GLightbox({
     selector: '.glightbox'
   });
-
-  /**
-   * Porfolio isotope and filter
-   */
+  document.addEventListener('DOMContentLoaded', () => {
+    "use strict";
   let portfolionIsotope = document.querySelector('.portfolio-isotope');
-
   if (portfolionIsotope) {
-
     let portfolioFilter = portfolionIsotope.getAttribute('data-portfolio-filter') ? portfolionIsotope.getAttribute('data-portfolio-filter') : '*';
     let portfolioLayout = portfolionIsotope.getAttribute('data-portfolio-layout') ? portfolionIsotope.getAttribute('data-portfolio-layout') : 'masonry';
     let portfolioSort = portfolionIsotope.getAttribute('data-portfolio-sort') ? portfolionIsotope.getAttribute('data-portfolio-sort') : 'original-order';
-
     window.addEventListener('load', () => {
       let portfolioIsotope = new Isotope(document.querySelector('.portfolio-container'), {
         itemSelector: '.portfolio-item',
@@ -119,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
         filter: portfolioFilter,
         sortBy: portfolioSort
       });
-
       let menuFilters = document.querySelectorAll('.portfolio-isotope .portfolio-flters li');
       menuFilters.forEach(function(el) {
         el.addEventListener('click', function() {
@@ -133,15 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }, false);
       });
-
     });
-
   }
-
-  /**
-   * Init swiper slider with 1 slide at once in desktop view
-   */
-  new Swiper('.slides-1', {
+new Swiper('.slides-1', {
     speed: 600,
     loop: true,
     autoplay: {
@@ -159,11 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
       prevEl: '.swiper-button-prev',
     }
   });
-
-  /**
-   * Init swiper slider with 2 slides at once in desktop view
-   */
-  new Swiper('.slides-2', {
+new Swiper('.slides-2', {
     speed: 600,
     loop: true,
     autoplay: {
@@ -185,23 +125,14 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 1,
         spaceBetween: 20
       },
-
       1200: {
         slidesPerView: 2,
         spaceBetween: 20
       }
     }
   });
-
-  /**
-   * Initiate pURE cOUNTER
-   */
-  new PureCounter();
-
-  /**
-   * Animation on scroll function and init
-   */
-  function aos_init() {
+new PureCounter();
+function aos_init() {
     AOS.init({
       duration: 800,
       easing: 'slide',
@@ -212,5 +143,5 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     aos_init();
   });
-
 });
+
