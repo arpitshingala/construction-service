@@ -1,0 +1,39 @@
+.bodyDiv{
+    background-color: gray;
+    height: 641px;
+}
+.mainDiv{
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    width: 600px;
+    height: 450px;
+}
+.h1{
+    margin-top: 20px;
+    color: orange;
+}
+.isError{
+    border-color: red;
+    width: 300px;
+}
+
+.error-txt{
+    color: red;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.btn{
+    color: white;
+    background-color: orange;
+    padding: 10px;
+}
+.btn:hover{
+    color: white;
+    background-color: rgb(230, 164, 42);
+    padding: 10px;
+}
